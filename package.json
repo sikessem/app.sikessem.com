@@ -1,0 +1,66 @@
+{
+  "name": "sikessem.com",
+  "description": "The Sikessem Web App.",
+  "private": true,
+  "engines": {
+    "bun": ">=1.0.0",
+    "npm": "prefer using bun",
+    "pnpm": "prefer using bun",
+    "yarn": "prefer using bun",
+    "node": "prefer using bun"
+  },
+  "packageManager": "bun@1.0.6",
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://sikessem.com",
+  "author": {
+    "name": "Sigui Kessé Emmanuel",
+    "email": "contact@sigui.ci",
+    "url": "https://sigui.ci"
+  },
+  "scripts": {
+    "build": "qwik build",
+    "build.client": "vite build",
+    "build.preview": "vite build --ssr src/entry.preview.tsx",
+    "build.server": "vite build -c adapters/bun/vite.config.ts",
+    "build.types": "tsc --incremental --noEmit",
+    "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
+    "dev": "vite --mode ssr",
+    "dev.debug": "bun --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
+    "fmt": "prettier --write .",
+    "fmt.check": "prettier --check .",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "preview": "qwik build preview && vite preview --open",
+    "serve": "bun server/entry.bun.js",
+    "start": "vite --open --mode ssr",
+    "qwik": "qwik"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "^1.2.13",
+    "@builder.io/qwik-city": "^1.2.13",
+    "@qwikest/icons": "^0.0.10",
+    "@types/eslint": "8.44.1",
+    "@types/node": "^20.4.5",
+    "@typescript-eslint/eslint-plugin": "6.2.0",
+    "@typescript-eslint/parser": "6.2.0",
+    "autoprefixer": "^10.4.14",
+    "bun-types": "^1.0.6",
+    "eslint": "8.45.0",
+    "eslint-plugin-qwik": "^1.2.13",
+    "postcss": "8.4.27",
+    "postcss-import": "^15.1.0",
+    "postcss-load-config": "^4.0.1",
+    "postcss-nested": "^6.0.1",
+    "prettier": "3.0.0",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6",
+    "undici": "5.22.1",
+    "vite": "4.4.7",
+    "vite-tsconfig-paths": "4.2.0"
+  },
+  "trustedDependencies": [
+    "sharp"
+  ]
+}

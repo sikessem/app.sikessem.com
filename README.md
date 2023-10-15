@@ -13,14 +13,17 @@ This project is using [Qwik](https://qwik.builder.io/) with [QwikCity](https://q
 
 Inside your project, you'll see the following directory structure:
 
-```txt
-├── public/
+```tree
+├── packages/
 │   └── ...
-└── src/
-    ├── components/
+└── site/
+    ├── public/
     │   └── ...
-    └── routes/
-        └── ...
+    └── src/
+        ├── components/
+        │   └── ...
+        └── routes/
+            └── ...
 ```
 
 - `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.builder.io/qwikcity/routing/overview/) for more info.
@@ -34,7 +37,7 @@ Inside your project, you'll see the following directory structure:
 Use the `bun qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.builder.io/qwikcity/guides/static-site-generation/).
 
 ```shell
-bun qwik add # or `bun qwik add`
+bun qwik add
 ```
 
 ## Development

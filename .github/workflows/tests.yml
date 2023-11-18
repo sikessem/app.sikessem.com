@@ -11,8 +11,9 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         bun: [1.0.12]
+        node: [20.9.0]
         experimental: [false]
-    name: 🧪 Test Sikessem using Bun-${{ matrix.bun }} under ${{ matrix.os }}
+    name: 🧪 Test Sikessem using Node-${{ matrix.node }} with Bun-${{ matrix.bun }} under ${{ matrix.os }}
 
     steps:
       - name: 🚚 Fetch code
@@ -22,6 +23,11 @@ jobs:
         uses: oven-sh/setup-bun@v1
         with:
           bun-version: ${{ matrix.bun }}
+
+      - name: ⚡️ Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
 
       - name: ⚗️ Install dependencies
         run: |

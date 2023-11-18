@@ -4,10 +4,10 @@
   "private": true,
   "engines": {
     "bun": ">=1.0.0",
+    "node": ">=20.9.0",
     "npm": "prefer using bun",
     "pnpm": "prefer using bun",
-    "yarn": "prefer using bun",
-    "node": "prefer using bun"
+    "yarn": "prefer using bun"
   },
   "packageManager": "bun@1.0.12",
   "publishConfig": {
@@ -21,13 +21,18 @@
   },
   "workspaces": [
     "packages/*",
-    "site"
+    "apps/*"
   ],
   "scripts": {
     "build": "lerna run build",
+    "build:api": "nx build @sikessem/api",
+    "build:website": "nx build @sikessem/website",
+    "dev": "lerna run dev",
+    "dev:api": "nx dev @sikessem/api",
+    "dev:website": "nx dev @sikessem/website",
     "start": "lerna run start",
-    "build:site": "nx build @sikessem.com/site",
-    "start:site": "nx start @sikessem.com/site"
+    "start:api": "nx start @sikessem/api",
+    "start:website": "nx start @sikessem/website"
   },
   "devDependencies": {
     "bun-types": "^1.0.12",

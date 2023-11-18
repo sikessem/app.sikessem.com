@@ -3,7 +3,7 @@ module.exports = {
     name: 'sikessem.com',
     interpreter: 'bun',
     interpreter_args: 'run',
-    script: 'site/server/entry.bun.js',
+    script: 'apps/website/server/entry.bun.js',
     args: '',
     watch: true,
     autorestart: true,

@@ -10,7 +10,7 @@ jobs:
       fail-fast: true
       matrix:
         os: [ubuntu-latest]
-        bun: [1.0.7]
+        bun: [1.0.12]
         experimental: [false]
     name: 🧪 Test Sikessem using Bun-${{ matrix.bun }} under ${{ matrix.os }}
 

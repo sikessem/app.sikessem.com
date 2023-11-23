@@ -3,13 +3,13 @@
   "description": "The Sikessem API.",
   "private": true,
   "engines": {
-    "bun": ">=1.0.0",
-    "node": ">=20.9.0",
-    "npm": "prefer using bun",
-    "pnpm": "prefer using bun",
-    "yarn": "prefer using bun"
+    "node": ">=20.10.0",
+    "pnpm": ">=8.10.0",
+    "npm": "prefer using pnpm",
+    "yarn": "prefer using pnpm",
+    "bun": "prefer using node and pnpm"
   },
-  "packageManager": "bun@1.0.12",
+  "packageManager": "pnpm@8.10.5",
   "publishConfig": {
     "access": "public"
   },

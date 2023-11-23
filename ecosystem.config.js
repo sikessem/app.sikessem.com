@@ -1,9 +1,7 @@
 module.exports = {
   apps : [{
     name: 'sikessem.com',
-    interpreter: 'bun',
-    interpreter_args: 'run',
-    script: 'apps/website/server/entry.bun.js',
+    script: 'apps/website/server/entry.ssr.js',
     args: '',
     watch: true,
     autorestart: true,

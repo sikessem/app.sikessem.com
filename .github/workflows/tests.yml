@@ -10,19 +10,13 @@ jobs:
       fail-fast: true
       matrix:
         os: [ubuntu-latest]
-        bun: [1.0.12]
-        node: [20.9.0]
+        node: [20.10.0]
         experimental: [false]
-    name: 🧪 Test Sikessem using Node-${{ matrix.node }} with Bun-${{ matrix.bun }} under ${{ matrix.os }}
+    name: 🧪 Test Sikessem on Node-${{ matrix.node }} under ${{ matrix.os }}
 
     steps:
       - name: 🚚 Fetch code
         uses: actions/checkout@v4
-
-      - name: ⚡️ Setup Bun
-        uses: oven-sh/setup-bun@v1
-        with:
-          bun-version: ${{ matrix.bun }}
 
       - name: ⚡️ Setup Node
         uses: actions/setup-node@v4
@@ -31,7 +25,8 @@ jobs:
 
       - name: ⚗️ Install dependencies
         run: |
-          bun install
+          corepack enable
+          corepack prepare pnpm@latest --activate
 
       - name: 🍱 Compile assets
-        run: bun run build
+        run: pnpm build

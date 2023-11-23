@@ -36,3 +36,6 @@ logs
 # Yarn
 .yarn/*
 !.yarn/releases
+
+
+.nx/cache

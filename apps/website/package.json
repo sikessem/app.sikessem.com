@@ -3,13 +3,13 @@
   "description": "The Sikessem Website.",
   "private": true,
   "engines": {
-    "bun": ">=1.0.0",
-    "npm": "prefer using bun",
-    "pnpm": "prefer using bun",
-    "yarn": "prefer using bun",
-    "node": "prefer using bun"
+    "node": ">=20.10.0",
+    "pnpm": ">=8.10.0",
+    "npm": "prefer using pnpm",
+    "yarn": "prefer using pnpm",
+    "bun": "prefer using node and pnpm"
   },
-  "packageManager": "bun@1.0.12",
+  "packageManager": "pnpm@8.10.5",
   "publishConfig": {
     "access": "public"
   },
@@ -27,12 +27,12 @@
     "build.types": "tsc --incremental --noEmit",
     "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
     "dev": "vite --mode ssr",
-    "dev.debug": "bun --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
+    "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
-    "serve": "bun server/entry.bun.js",
+    "serve": "node server/entry.ssr.js",
     "start": "vite --open --mode ssr",
     "qwik": "qwik"
   },
@@ -55,6 +55,7 @@
     "prettier": "3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
     "tailwindcss": "3.3.5",
+    "ts-node": "^10.9.1",
     "typescript": "5.2.2",
     "undici": "5.27.2",
     "vite": "5.0.0",

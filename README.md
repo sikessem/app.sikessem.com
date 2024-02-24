@@ -1,11 +1,10 @@
-[!IMPORTANT]
-# Important Notice: Changes in Project Maintenance
+> [!IMPORTANT]
+> # Important Notice: Changes in Project Maintenance
+> Welcome to [https://sikessem.com](https://github.com/sikessem/sikessem.com), [the official website of the Sikessem Web Application](https://sikessem.com)!
 
-Welcome to [https://sikessem.com](https://github.com/sikessem/sikessem.com), [the official website of the Sikessem Web Application](https://sikessem.com)!
-
-[!WARNING]
-# Project Status Update
-Please be advised that this repository is no longer actively maintained. For the most recent updates, new features, and fixes, we encourage you to visit our [New Sikessem Repository](https://github.com/sikessem/sikessem.com).
+> [!WARNING]
+> # Project Status Update
+> Please be advised that this repository is no longer actively maintained. For the most recent updates, new features, and fixes, we encourage you to visit our [New Sikessem Repository](https://github.com/sikessem/sikessem.com).
 
 # The Sikessem Web App ⚡️
 
